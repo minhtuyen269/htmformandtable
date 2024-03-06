@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Tạo form lấy survey khách hàng</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        table.Please-rate{
+            text-align: center;
+            border-collapse: collapse;
+            width: 1000px;
+        }
+        tr.Please-rate-1{
+            border: 2px solid black;
+        }
+        td{
+            text-align: left;
+            border: 2px solid black;
+        }
+        tr.submit1{
+            height: 40px;
+        }
+        tr.Please-rate-1:nth-child(even){
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <h1>Market Research Survey</h1>
+            Please take a few moments to complete this satisfaction survey.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            What is your age range?
+            <br>
+            <select name="" id="">
+                <option value="">$0-$25,000</option>
+                <option value="">$25,001-$50,000</option>
+                <option value="">$50,001-$100,000</option>
+                <option value="">$100,000+</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Gender Identity
+            <br>
+            <input type="radio">Male
+            <br>
+            <input type="radio">Female
+            <br>
+            <input type="radio">Nonbinary
+            <br>
+            <input type="radio">Other
+            <br>
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Which of the following products have your purchased in the last 2 months. Please check all that apply.
+            <br>
+            <input type="checkbox">Product 1
+            <br>
+            <input type="checkbox">Product 2
+            <br>
+            <input type="checkbox">Product 3
+        </td>
+    </tr>
+    <tr>
+        <td>
+            How often would you use our new product?
+            <br>
+            <input type="radio">Daily
+            <br>
+            <input type="radio">Weeky
+            <br>
+            <input type="radio">Monthly
+            <br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            What would you pay for the new product?
+            <br>
+            $ <input type="text"> -
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            What features would you like to see in the new product.
+            <br>
+            <textarea></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Please rate your level of agreement with the following statements.
+            <br>
+            <table class="Please-rate">
+                <tr class="Please-rate-1">
+                    <td></td>
+                    <td>Strongly Disagree</td>
+                    <td>Disagree</td>
+                    <td>Agree</td>
+                    <td>Strongly Agree</td>
+                </tr>
+                <tr class="Please-rate-1">
+                    <td>Our products are priced fairly.	</td>
+                    <td><input type="radio" name="chon">1</td>
+                    <td><input type="radio" name="chon">2</td>
+                    <td><input type="radio" name="chon">3</td>
+                    <td><input type="radio" name="chon">4</td>
+                </tr>
+                <tr class="Please-rate-1">
+                    <td>Our products are high quality.</td>
+                    <td><input type="radio" name="chon1">1</td>
+                    <td><input type="radio" name="chon1">2</td>
+                    <td><input type="radio" name="chon1">3</td>
+                    <td><input type="radio" name="chon1">4</td>
+                </tr>
+                <tr class="Please-rate-1">
+                    <td>You would recommend our product to a friend or coworker.</td>
+                    <td><input type="radio" name="chon2">1</td>
+                    <td><input type="radio" name="chon2">2</td>
+                    <td><input type="radio" name="chon2">3</td>
+                    <td><input type="radio" name="chon2">4</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr class="submit1">
+        <td>
+            <input type="button" value="submit" class="submit1">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            This site is protected by re CAPTCHA Enterprise and the Google
+            <a href="">Privacy Policy</a> and
+            <a href="">Terms of Service apply.</a> Terms of Service apply.
+        </td>
+    </tr>
+</table>
+</body>
+</html>
