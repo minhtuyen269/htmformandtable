@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        td{
+            width: 200px;
+            height: 30px;
+            text-align: center;
+        }
+        body{
+            background: #c7c7c7;
+            margin-top: 10%;
+            margin-left: 10% ;
+        }
+    </style>
+</head>
+<body>
+<!--[Bài tập] Ứng dụng chuyển đổi tiền tệ-->
+<table >
+
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><input type="number" id="Amount"></td>
+        <td>
+            <select id="fromM">
+                <option value="23000">VNĐ</option>
+                <option value="1">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="toM">
+            <option value="1">USD</option>
+            <option value="23000">VNĐ</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="convert()">Convert</button>
+        </td>
+    </tr>
+</table>
+<h1 id="Result"></h1>
+</body>
+<script>
+    function convert() {
+        var amount = +document.getElementById("Amount").value
+        var fromM = +document.getElementById("fromM").value
+        var toM = +document.getElementById("toM").value
+
+        var result = amount * ( toM / fromM);
+        document.getElementById("Result").innerHTML = 'Result = ' + result;
+    }
+</script>
+</html>
