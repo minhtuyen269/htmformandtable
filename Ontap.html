@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Ôn tập</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    //Câu 1: Cho danh sách các điểm thi ở trong một mảng Hãy viết hàm tìm được điểm thi cao thứ 3 với đầu vào là một mảng điểm. (không dùng hàm có sẵn để sắp xếp)
+    // let arr = [8, 9, 5, 7, 3, 10, 20]
+    // let max1;
+    // let max2;
+    // let max3;
+    // let min = arr[0];
+    // for (let i = 0; i < arr.length; i++) { // Duyệt chuỗi
+    //     if (min > arr[i]) {
+    //         min = arr[i];
+    //     }
+    // }
+    // max1 = min
+    // max2 = min
+    // max3 = min
+    //
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] > max1) {
+    //         max3 = max2;
+    //         max2 = max1;
+    //         max1 = arr[i];
+    //     }
+    //     if (arr[i] > max2 > max3 && max1 > arr[i]) {
+    //         max3 = arr[i];
+    //     }
+    // }
+    // console.log("Điểm thi cao thứ 3 là : " + max3)
+
+    //Câu 2: Viết hàm tryRemoveFromArray() nhận vào tham số là một mảng và một số nguyên index, trả về mảng ban đầu đã được loại bỏ phần tử tại vị trí index nếu index hợp lệ.
+    //Nếu index không hợp lệ, trả về mảng ban đầu. (không dùng hàm có sẵn để xóa mảng)
+    let arr = [1, 2, 3, 4, 5];
+    let index = 2; // Index cần loại bỏ
+    let result = []; // Mảng kết quả
+
+    // Kiểm tra xem index có hợp lệ không
+    if (index >= 0 && index < arr.length) {
+        // Sao chép tất cả các phần tử từ mảng gốc vào mảng kết quả, loại bỏ phần tử ở vị trí index
+        for (let i = 0; i < arr.length; i++) {
+            if (i !== index) {
+                result.push(arr[i]);
+            }
+        }
+    } else {
+        // Trả về mảng ban đầu nếu index không hợp lệ
+        result = arr;
+    }
+
+    console.log("Mảng ban đầu:", arr);
+    console.log("Mảng sau khi loại bỏ phần tử tại index:", result);
+
+    //Câu 3: Viết hàm kiểm tra xem 1 chuỗi có nằm trong chuỗi còn lại không.
+    //Với đầu vào là 2 chuỗi (str1,str2) trong đó sẽ kiểm tra str1 có nằm trong str2 không, nếu có trả về true và ngược lại false. (không được dùng hàm có sẵn để tìm)
+    let str1 = "hello";
+    let str2 = "This is a hello world example";
+
+    let found = false;
+
+    // Duyệt qua mỗi ký tự trong chuỗi str2
+    for (let i = 0; i < str2.length; i++) {
+        let match = true;
+        // So sánh mỗi ký tự trong str1 với các ký tự trong str2 kể từ vị trí hiện tại của i
+        for (let j = 0; j < str1.length; j++) {
+            if (str1[j] !== str2[i + j]) {
+                match = false;
+                break;
+            }
+        }
+        // Nếu tìm thấy chuỗi str1 trong str2, đặt found thành true và kết thúc vòng lặp
+        if (match) {
+            found = true;
+            break;
+        }
+    }
+    console.log(found);
+    //Câu 4: Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô tả của lớp hình chữ nhật như sau:
+    // Rectangle: Tên lớp
+    // - x: Toạ độ x
+    // - y: Toạ độ y
+    // - width: Chiều rộng
+    // - height: Chiều cao
+    // - color: Màu sắc (sử dụng mã màu hex)
+    // + render(canvas): Hiển thị hình chữ nhật trên một canvas Hãy thực hiện các thao tác theo kịch bản sau:
+    // - Tạo một hình chữ nhật có tọa độ 10,10 và kích thước rộng 200, cao 100, màu #000000
+    // - Hiển thị hình chữ nhật trên một canvas bằng cách sử dụng phương thức render
+
+</script>
 </html>
