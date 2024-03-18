@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai Tap JS 4</title>
+</head>
+<body>
+    <input type="number" id="SoA" placeholder="Nhập số">
+    <br><br>
+    <input type="number" id="SoB" placeholder="Nhập số">
+    <br><br>
+    <button onclick="Tong2So()">Submit</button>
+</body>
+<script>
+
+    function Tong2So() {
+        let a = document.getElementById("SoA").value
+        let b = document.getElementById("SoB").value
+
+        a = Number(a)
+        b = Number(b)
+
+        alert(a)
+        alert(b)
+        let sum = a + b
+        alert(sum)
+
+
+    }
+
+    <!--Bài 4: Trên HTML cho hai ô input để người dùng nhập và một ô button khi click vào thì hiển thị ra giá trị của hai ô đó + Tinh tổng của giá trị của hai ô đó và hiển thị khi người dùng click vào nút.-->
+
+</script>
+</html>

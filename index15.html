@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT4</title>
+</head>
+<body>
+<!--Bài 4: Trên HTML cho hai ô input để người dùng nhập và một ô button khi click vào thì hiển thị ra giá trị của hai ô đó +
+Tinh tổng của giá trị của hai ô đó và hiển thị khi người dùng click vào nút.-->
+    <input type="number" id="NhapSoA" placeholder="Nhập số">
+    <br><br>
+    <input type="number" id="NhapSoB" placeholder="Nhập số" required>
+    <input type="submit" value="Gửi">
+    <br><br>
+    <button onclick="start()" id="ketqua">Submit</button>
+    <br><br>
+</body>
+<script>
+
+
+    function start() {
+        let a = +document.getElementById("NhapSoA").value
+        let b = +document.getElementById("NhapSoB").value
+
+        alert("Đây là số A = " + a + "  Và đây là số B = " + b)
+        //alert()
+
+        let sum = a + b
+        alert(sum)
+
+    }
+</script>
+</html>

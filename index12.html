@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai Tap 1 Nâng Cao</title>
+</head>
+<body>
+<!--Bài 1: Trong HTML cho một ô input, khi người dùng thay đổi giá trị của ô input dó thì console,log ra giá trị đó.-->
+<input type="text" id="NewData" onchange="NewNumber">
+<button onclick="NewNumber()">Nhập</button>
+
+</body>
+<script>
+    function NewNumber() {
+        let a = document.getElementById('NewData').value
+        console.log(a)
+    }
+
+</script>
+</html>
