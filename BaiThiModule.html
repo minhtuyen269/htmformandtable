@@ -5,7 +5,7 @@
     <title>Ôn tập</title>
 </head>
 <body>
-
+<canvas id="myCanvas" width="400" height="200"></canvas>
 </body>
 <script>
     //Câu 1: Cho danh sách các điểm thi ở trong một mảng Hãy viết hàm tìm được điểm thi cao thứ 3 với đầu vào là một mảng điểm. (không dùng hàm có sẵn để sắp xếp)
@@ -81,7 +81,8 @@
         }
     }
     console.log(found);
-    //Câu 4: Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô tả của lớp hình chữ nhật như sau:
+
+    // Câu 4: Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô tả của lớp hình chữ nhật như sau:
     // Rectangle: Tên lớp
     // - x: Toạ độ x
     // - y: Toạ độ y
@@ -91,6 +92,36 @@
     // + render(canvas): Hiển thị hình chữ nhật trên một canvas Hãy thực hiện các thao tác theo kịch bản sau:
     // - Tạo một hình chữ nhật có tọa độ 10,10 và kích thước rộng 200, cao 100, màu #000000
     // - Hiển thị hình chữ nhật trên một canvas bằng cách sử dụng phương thức render
+
+    // Định nghĩa lớp Rectangle
+    class Rectangle {
+        constructor(x, y, width, height, color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+
+        // Phương thức render để hiển thị hình chữ nhật trên canvas
+        render(canvas) {
+            // Lấy context 2D của canvas
+            let ctx = canvas.getContext("2d");
+
+            // Vẽ hình chữ nhật
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+
+    // Tạo một hình chữ nhật mới
+    let rectangle = new Rectangle(10, 10, 200, 100, "#000000");
+
+    // Lấy canvas từ DOM
+    let canvas = document.getElementById("myCanvas");
+
+    // Hiển thị hình chữ nhật trên canvas
+    rectangle.render(canvas);
 
 </script>
 </html>
